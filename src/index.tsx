@@ -9,24 +9,24 @@ import Atoms from './examples/Atoms'
 import {Selectors} from './examples/Selectors'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <RecoilRoot>
-      <ChakraProvider>
-        <Router>
-          <Switch>
-            <Route path="/examples/atoms">
-              <Atoms />
-            </Route>
-            <Route path="/examples/selectors">
-              <Selectors />
-            </Route>
-            <Route>
-              <Canvas />
-            </Route>
-          </Switch>
-        </Router>
-      </ChakraProvider>
-    </RecoilRoot>
-  </React.StrictMode>,
-  document.getElementById('root'),
+    <React.StrictMode>
+        <RecoilRoot>
+            <ChakraProvider>
+                <Router>
+                    <Switch>
+                        <Route path="/examples/atoms">
+                            <Atoms />
+                        </Route>
+                        <Route path="/examples/selectors">
+                            <Selectors />
+                        </Route>
+                        <Route>
+                            <Canvas />
+                        </Route>
+                    </Switch>
+                </Router>
+            </ChakraProvider>
+        </RecoilRoot>
+    </React.StrictMode>,
+    document.getElementById('root'),
 )

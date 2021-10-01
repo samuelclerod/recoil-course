@@ -2,35 +2,35 @@ import {useState} from 'react'
 import {atom, useRecoilState, useRecoilValue} from 'recoil'
 
 const darkModeAtom = atom({
-  key: 'darkMode',
-  default: false,
+    key: 'darkMode',
+    default: false,
 })
 
 const DarkModeSwitch = () => {
-  const [darkMode, setDarkMode] = useRecoilState(darkModeAtom)
-  return <input type="checkbox" checked={darkMode} onChange={(event) => setDarkMode(event.currentTarget.checked)} />
+    const [darkMode, setDarkMode] = useRecoilState(darkModeAtom)
+    return <input type="checkbox" checked={darkMode} onChange={(event) => setDarkMode(event.currentTarget.checked)} />
 }
 
 const Button = () => {
-  const darkMode = useRecoilValue(darkModeAtom)
-  return (
-    <button style={{backgroundColor: darkMode ? 'black' : 'white', color: darkMode ? 'white' : 'black'}}>
-      My ui button
-    </button>
-  )
+    const darkMode = useRecoilValue(darkModeAtom)
+    return (
+        <button style={{backgroundColor: darkMode ? 'black' : 'white', color: darkMode ? 'white' : 'black'}}>
+            My ui button
+        </button>
+    )
 }
 
 const Atoms = () => {
-  return (
-    <div>
-      <div>
-        <DarkModeSwitch />
-      </div>
-      <div>
-        <Button />
-      </div>
-    </div>
-  )
+    return (
+        <div>
+            <div>
+                <DarkModeSwitch />
+            </div>
+            <div>
+                <Button />
+            </div>
+        </div>
+    )
 }
 
 export default Atoms
